@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-high": "#20201f",
+                  "on-primary-container": "#005a10",
+                  "primary-fixed": "#00fc40",
+                  "error": "#ff7351",
+                  "inverse-on-surface": "#565555",
+                  "surface-container-lowest": "#000000",
+                  "on-primary-fixed": "#00440a",
+                  "on-secondary": "#005f30",
+                  "primary-fixed-dim": "#00ec3b",
+                  "on-surface": "#ffffff",
+                  "secondary-fixed": "#89faaa",
+                  "on-secondary-fixed": "#004a24",
+                  "inverse-surface": "#fcf9f8",
+                  "surface-container-highest": "#262626",
+                  "tertiary-container": "#0eeafd",
+                  "error-container": "#b92902",
+                  "on-primary": "#006413",
+                  "surface-variant": "#262626",
+                  "on-tertiary": "#005b63",
+                  "tertiary-fixed-dim": "#00dbec",
+                  "outline": "#767575",
+                  "primary-dim": "#00ec3b",
+                  "on-error": "#450900",
+                  "surface-container": "#1a1a1a",
+                  "primary-container": "#00fc40",
+                  "secondary-dim": "#7aeb9d",
+                  "on-secondary-fixed-variant": "#006a36",
+                  "secondary-container": "#006d38",
+                  "surface-dim": "#0e0e0e",
+                  "tertiary-fixed": "#0eeafd",
+                  "on-tertiary-fixed": "#003d42",
+                  "primary": "#9cff93",
+                  "on-tertiary-fixed-variant": "#005c64",
+                  "tertiary": "#8af2ff",
+                  "secondary": "#89faaa",
+                  "surface-bright": "#2c2c2c",
+                  "on-error-container": "#ffd2c8",
+                  "inverse-primary": "#006f16",
+                  "surface-container-low": "#131313",
+                  "error-dim": "#d53d18",
+                  "outline-variant": "#484847",
+                  "on-surface-variant": "#adaaaa",
+                  "on-background": "#ffffff",
+                  "on-tertiary-container": "#005159",
+                  "surface": "#0e0e0e",
+                  "surface-tint": "#9cff93",
+                  "secondary-fixed-dim": "#7aeb9d",
+                  "tertiary-dim": "#00dbec",
+                  "on-primary-fixed-variant": "#006513",
+                  "background": "#0e0e0e",
+                  "on-secondary-container": "#e3ffe5"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "fontFamily": {
+                  "headline": ["Space Grotesk"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .active-nav-glow {
+      text-shadow: 0 0 12px rgba(156, 255, 147, 0.4);
+    }
+    .asymmetric-card {
+      border-top-left-radius: 0.75rem;
+      border-bottom-right-radius: 0.75rem;
+      border-top-right-radius: 0.125rem;
+      border-bottom-left-radius: 0.125rem;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl bg-[#131313] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#9cff93] active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-2xl font-bold tracking-widest text-[#9cff93] font-['Space_Grotesk'] uppercase">RIDECONNECT</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#9cff93]/20 transition-transform active:scale-95">
+<img alt="Rider Avatar" data-alt="close-up portrait of a professional cyclist with a focused expression, wearing sleek black helmet and aerodynamic sunglasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvjfjlBCqAZSm1WhgdSKWgy3o7bF27X01cM_Acv7iJt5hHrxs7ABKAWV53_NRStjxWh2uhFVfvpUu-7x0UkpkqfqRDkq_LTxcFCweJmuptrdwUeh07QJngrsImubpuFEVVfk-b8MWZ2AYXOP_CnU2PLmK-VjqeO5B0UcCgta8gxYE0r8ueMi250gcNhvVqJZKJtVgvGYa1y6MvK2c9OeBcJY3sDrRsbh0wYqT2QONgax2PmVHqOzQlVm-OiSBKXNFTR7s6blXGwwk"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto flex flex-col min-h-screen">
+<!-- Title Section -->
+<div class="mb-10">
+<h2 class="font-headline text-5xl font-bold text-on-surface tracking-tighter leading-none mb-2">JOIN<br/><span class="text-primary">GROUP RIDE</span></h2>
+<p class="text-on-surface-variant font-medium">Enter the 6-digit Ride ID shared by your lead rider to sync telemetry and navigation.</p>
+</div>
+<!-- Input Section (Kinetic Precision Design) -->
+<div class="relative mb-12">
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-highest asymmetric-card p-6 shadow-2xl shadow-primary/5 border-b-2 border-primary">
+<label class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Ride Identity Code</label>
+<div class="flex justify-between gap-2">
+<!-- Simulated Pin Input -->
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+<input class="w-12 h-16 bg-surface-container text-center text-3xl font-headline font-bold text-primary border-none rounded-lg focus:ring-0 focus:bg-surface-bright" maxlength="1" pattern="\d*" placeholder="0" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Numeric Keypad (Optimized for handlebar mounts/gloves) -->
+<div class="grid grid-cols-3 gap-3 mb-8">
+<!-- Row 1 -->
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">1</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">2</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">3</button>
+<!-- Row 2 -->
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">4</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">5</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">6</button>
+<!-- Row 3 -->
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">7</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">8</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">9</button>
+<!-- Row 4 -->
+<button class="h-16 flex items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="h-16 bg-surface-container-low asymmetric-card flex items-center justify-center text-2xl font-headline font-bold hover:bg-surface-bright active:scale-95 transition-all">0</button>
+<button class="h-16 flex items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+</button>
+</div>
+<!-- CTA Section -->
+<div class="mt-auto pt-6">
+<button class="w-full h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary text-xl font-headline font-bold tracking-widest asymmetric-card shadow-[0px_12px_24px_rgba(156,255,147,0.25)] active:scale-95 transition-transform flex items-center justify-center gap-3">
+        JOIN GROUP
+        <span class="material-symbols-outlined" data-icon="arrow_forward" data-weight="fill">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-on-surface-variant uppercase tracking-widest mt-6 font-bold opacity-60">Scanning for local beacons...</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-black/80 backdrop-blur-2xl bg-[#131313] shadow-[0px_-12px_24px_rgba(156,255,147,0.05)] rounded-t-[2rem] z-50">
+<a class="flex flex-col items-center justify-center text-[#484847] font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+      HOME
+    </a>
+<a class="flex flex-col items-center justify-center text-[#484847] font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="pedal_bike">pedal_bike</span>
+      START
+    </a>
+<a class="flex flex-col items-center justify-center text-[#9cff93] scale-110 font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest hover:text-[#9cff93] transition-all active:scale-90 duration-200 active-nav-glow" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="group_add">group_add</span>
+      JOIN
+    </a>
+<a class="flex flex-col items-center justify-center text-[#484847] font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+      MAP
+    </a>
+</nav>
+</body></html>

@@ -1,0 +1,20 @@
+## OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+## Android / Gradle
+**/.gradle/
+**/build/
+**/.cxx/
+**/*.iml
+**/captures/
+**/local.properties
+
+## Secrets
+**/secrets.properties
+**/*.jks
+**/*.keystore
+**/google-services.json
+

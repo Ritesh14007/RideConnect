@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RideConnect</string>
+    <string name="ride_notifications_channel_name">Ride Updates</string>
+    <string name="ride_notifications_channel_description">Notifications for ride status updates and alerts.</string>
+    <string name="rideconnect_default_notification_title">RideConnect</string>
+</resources>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RideConnect | Rider Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#003d42",
+                    "on-tertiary": "#005b63",
+                    "secondary-dim": "#7aeb9d",
+                    "on-background": "#ffffff",
+                    "primary": "#9cff93",
+                    "tertiary-fixed-dim": "#00dbec",
+                    "surface-tint": "#9cff93",
+                    "on-primary": "#006413",
+                    "outline": "#767575",
+                    "on-secondary": "#005f30",
+                    "error-container": "#b92902",
+                    "on-primary-fixed-variant": "#006513",
+                    "error-dim": "#d53d18",
+                    "surface-dim": "#0e0e0e",
+                    "surface-variant": "#262626",
+                    "primary-dim": "#00ec3b",
+                    "primary-container": "#00fc40",
+                    "surface-container-lowest": "#000000",
+                    "inverse-on-surface": "#565555",
+                    "error": "#ff7351",
+                    "tertiary": "#8af2ff",
+                    "primary-fixed-dim": "#00ec3b",
+                    "on-tertiary-container": "#005159",
+                    "on-primary-container": "#005a10",
+                    "surface-container-highest": "#262626",
+                    "surface": "#0e0e0e",
+                    "on-error": "#450900",
+                    "tertiary-dim": "#00dbec",
+                    "on-surface": "#ffffff",
+                    "surface-container-high": "#20201f",
+                    "background": "#0e0e0e",
+                    "secondary-fixed": "#89faaa",
+                    "secondary-container": "#006d38",
+                    "surface-container": "#1a1a1a",
+                    "on-surface-variant": "#adaaaa",
+                    "on-secondary-fixed": "#004a24",
+                    "surface-bright": "#2c2c2c",
+                    "primary-fixed": "#00fc40",
+                    "secondary": "#89faaa",
+                    "on-error-container": "#ffd2c8",
+                    "inverse-primary": "#006f16",
+                    "surface-container-low": "#131313",
+                    "on-secondary-container": "#e3ffe5",
+                    "on-tertiary-fixed-variant": "#005c64",
+                    "on-secondary-fixed-variant": "#006a36",
+                    "on-primary-fixed": "#00440a",
+                    "secondary-fixed-dim": "#7aeb9d",
+                    "outline-variant": "#484847",
+                    "tertiary-fixed": "#0eeafd",
+                    "tertiary-container": "#0eeafd",
+                    "inverse-surface": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-card {
+            border-top-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+            border-top-right-radius: 0.125rem;
+            border-bottom-left-radius: 0.125rem;
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[#9cff93]">menu</span>
+</button>
+<span class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-2xl tracking-widest text-[#9cff93]">RIDECONNECT</span>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-primary/20 active:scale-95 transition-transform">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional cyclist with a determined expression, wearing a sleek black helmet and aerodynamic cycling gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQdgoonDHt-CrLatFQziNK-6ypIKwVS2E1A7ULOmGZBLOPcvaM9Oq2VUWHtWLeCJSxRZOyU8bJV1OeSLeOdMSmm9XjbTDKteH_K0RwReFgdaDkQKVq6L3Z2uxc8IAT98qERharmwRLP-lpw4Xff_IKeu9t9ejeFsSNZ9N2e8JpwdKL4HR2UCPPE-vyYKxmkhJ0DZuQO6aD_bE_sY9iTHbP5OHDhSdiU-v7qzqutd7KfOV6PiDvOhUV11EWE8WajoCVPFjCfEF4gHY"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto space-y-10">
+<!-- Rider Profile Header -->
+<section class="flex flex-col md:flex-row items-center md:items-end gap-6">
+<div class="relative">
+<div class="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-surface-container-highest shadow-[0px_0px_30px_rgba(156,255,147,0.15)]">
+<img alt="Rider One" class="w-full h-full object-cover" data-alt="Professional cyclist in high-end black racing kit, side profile against a moody dark background, lighting highlighting athletic form" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4jy1lAtOtUkMyXH-KUXQm4hxFvDbg3TAMuFUhF9VsQSIFpYxbbwMNUFQGQHThTDgaQ8DLBX3f8vJe1jFiN0ePg_S8vwV62aMHxJ8h7k0NQIGJoHJBktvDSMmm8XWpoyySTtQRAkQcyHqc8hehLEGxFc1J73IDDDeMkLB4lq4mppLXjZqqKgD4SGXou4Ad15GTzwG3gYIeezTJqIYi8Axe5XF6bw_mxnLpvdPWp7kajclnFOMvMH7Kyns3Ey8oMFnBBiH9u20xiP4"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-extrabold tracking-widest uppercase font-headline">
+                    PRO
+                </div>
+</div>
+<div class="text-center md:text-left space-y-2">
+<h1 class="text-4xl md:text-5xl font-headline font-bold tracking-tighter">Rider One</h1>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 items-center">
+<span class="text-on-surface-variant text-sm font-medium">Member since Jan 2023</span>
+<div class="h-1 w-1 rounded-full bg-outline-variant"></div>
+<span class="text-primary text-sm font-bold uppercase tracking-widest">Pro Category</span>
+</div>
+</div>
+</section>
+<!-- Primary Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="asymmetric-card bg-surface-container-low p-6 flex flex-col justify-between min-h-[160px] group hover:bg-surface-container-high transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Total Distance</span>
+<div class="mt-4">
+<span class="text-5xl font-headline font-bold text-on-surface">1,240</span>
+<span class="text-primary font-headline font-bold ml-1">KM</span>
+</div>
+<div class="mt-2 h-1 w-12 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+<div class="asymmetric-card bg-surface-container-low p-6 flex flex-col justify-between min-h-[160px] group hover:bg-surface-container-high transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Elev Gain</span>
+<div class="mt-4">
+<span class="text-5xl font-headline font-bold text-on-surface">8.4</span>
+<span class="text-primary font-headline font-bold ml-1">KM</span>
+</div>
+<div class="mt-2 h-1 w-12 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</div>
+<div class="asymmetric-card bg-surface-container-low p-6 flex flex-col justify-between min-h-[160px] group hover:bg-surface-container-high transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Avg Speed</span>
+<div class="mt-4">
+<span class="text-5xl font-headline font-bold text-on-surface">32.4</span>
+<span class="text-primary font-headline font-bold ml-1 text-xl">KM/H</span>
+</div>
+<div class="mt-2 h-1 w-12 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</section>
+<!-- Monthly Progress Chart -->
+<section class="space-y-4">
+<div class="flex justify-between items-end px-2">
+<h3 class="text-xl font-headline font-bold tracking-tight">Monthly Progress</h3>
+<span class="text-xs text-on-surface-variant font-bold">OCTOBER 2023</span>
+</div>
+<div class="asymmetric-card bg-surface-container-low p-8 relative overflow-hidden h-64 flex items-end justify-between gap-1">
+<!-- Simple stylized bar/line representation -->
+<div class="w-full h-full absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,80 L50,60 L100,75 L150,40 L200,55 L250,20 L300,45 L350,10 L400,30" fill="none" stroke="#9cff93" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<div class="flex-1 bg-surface-container-highest h-[20%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[45%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[30%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[60%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[50%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary/40 h-[85%] rounded-t-sm border-t-2 border-primary"></div>
+<div class="flex-1 bg-surface-container-highest h-[40%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[70%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[55%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[90%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[35%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary h-[100%] rounded-t-sm shadow-[0_-8px_16px_rgba(156,255,147,0.2)]"></div>
+<div class="flex-1 bg-surface-container-highest h-[65%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-[45%] rounded-t-sm"></div>
+</div>
+</section>
+<!-- Recent Achievements -->
+<section class="space-y-4">
+<h3 class="text-xl font-headline font-bold tracking-tight px-2">Recent Achievements</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 snap-x">
+<div class="snap-start flex-shrink-0 w-40 glass-panel p-6 asymmetric-card flex flex-col items-center text-center space-y-3 group transition-all hover:bg-primary/5">
+<div class="h-16 w-16 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter leading-tight">Century Club</span>
+</div>
+<div class="snap-start flex-shrink-0 w-40 glass-panel p-6 asymmetric-card flex flex-col items-center text-center space-y-3 group transition-all hover:bg-primary/5">
+<div class="h-16 w-16 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary/40 text-3xl" style="font-variation-settings: 'FILL' 1;">landscape</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter leading-tight">King of the Hill</span>
+</div>
+<div class="snap-start flex-shrink-0 w-40 glass-panel p-6 asymmetric-card flex flex-col items-center text-center space-y-3 group transition-all hover:bg-primary/5">
+<div class="h-16 w-16 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary/40 text-3xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter leading-tight">Early Bird</span>
+</div>
+<div class="snap-start flex-shrink-0 w-40 glass-panel p-6 asymmetric-card flex flex-col items-center text-center space-y-3 group transition-all hover:bg-primary/5">
+<div class="h-16 w-16 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary/40 text-3xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter leading-tight">Sprint Master</span>
+</div>
+</div>
+</section>
+<!-- Gear Section -->
+<section class="space-y-4">
+<h3 class="text-xl font-headline font-bold tracking-tight px-2">Gear Setup</h3>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-5 bg-surface-container-low asymmetric-card">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-highest p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">pedal_bike</span>
+</div>
+<div>
+<p class="text-on-surface font-bold">Specialized Tarmac SL7</p>
+<p class="text-on-surface-variant text-xs">Primary Road Bike • Carbon Fiber</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-5 bg-surface-container-low asymmetric-card">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-highest p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">settings_input_component</span>
+</div>
+<div>
+<p class="text-on-surface font-bold">SRAM Red eTap</p>
+<p class="text-on-surface-variant text-xs">Electronic Groupset • 12-Speed</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-black/80 backdrop-blur-2xl z-50 rounded-t-[2rem] shadow-[0px_-12px_24px_rgba(156,255,147,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">pedal_bike</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">START</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">group_add</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">JOIN</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#9cff93] scale-110 hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

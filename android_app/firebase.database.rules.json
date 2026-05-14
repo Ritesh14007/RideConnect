@@ -1,0 +1,49 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "emailIndex": {
+      "$encodedEmail": {
+        ".read": "auth != null",
+        ".write": "auth != null && newData.val() === auth.uid"
+      }
+    },
+    "rides": {
+      "$rideId": {
+        "meta": {
+          ".read": "auth != null",
+          ".write": "auth != null && (( !data.exists() && newData.child('ownerUid').val() === auth.uid ) || ( data.exists() && data.child('ownerUid').val() === auth.uid ))",
+          ".validate": "newData.hasChildren(['ownerUid','name','destination','createdAt','status'])"
+        },
+        "members": {
+          "$uid": {
+            ".read": "auth != null && (auth.uid === $uid || root.child('rides').child($rideId).child('members').child(auth.uid).val() === true || root.child('rides').child($rideId).child('meta').child('ownerUid').val() === auth.uid)",
+            ".write": "auth != null && ((root.child('rides').child($rideId).child('meta').child('ownerUid').val() === auth.uid) || (auth.uid === $uid && root.child('rides').child($rideId).child('invites').child(auth.uid).val() === true))",
+            ".validate": "newData.val() === true"
+          }
+        },
+        "invites": {
+          "$uid": {
+            ".read": "auth != null && (auth.uid === $uid || root.child('rides').child($rideId).child('meta').child('ownerUid').val() === auth.uid || root.child('rides').child($rideId).child('members').child(auth.uid).val() === true)",
+            ".write": "auth != null && root.child('rides').child($rideId).child('meta').child('ownerUid').val() === auth.uid",
+            ".validate": "newData.val() === true || !newData.exists()"
+          }
+        },
+        "riders": {
+          "$uid": {
+            ".read": "auth != null && root.child('rides').child($rideId).child('members').child(auth.uid).val() === true",
+            ".write": "auth != null && auth.uid === $uid && root.child('rides').child($rideId).child('members').child(auth.uid).val() === true",
+            ".validate": "newData.hasChildren(['id','name','lat','lng','isSos','speedKmh','lastUpdated'])"
+          }
+        }
+      }
+    }
+  }
+}
+

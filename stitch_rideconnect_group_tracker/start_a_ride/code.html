@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Plus_Jakarta_Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#20201f",
+                    "on-primary-container": "#005a10",
+                    "primary-fixed": "#00fc40",
+                    "error": "#ff7351",
+                    "inverse-on-surface": "#565555",
+                    "surface-container-lowest": "#000000",
+                    "on-primary-fixed": "#00440a",
+                    "on-secondary": "#005f30",
+                    "primary-fixed-dim": "#00ec3b",
+                    "on-surface": "#ffffff",
+                    "secondary-fixed": "#89faaa",
+                    "on-secondary-fixed": "#004a24",
+                    "inverse-surface": "#fcf9f8",
+                    "surface-container-highest": "#262626",
+                    "tertiary-container": "#0eeafd",
+                    "error-container": "#b92902",
+                    "on-primary": "#006413",
+                    "surface-variant": "#262626",
+                    "on-tertiary": "#005b63",
+                    "tertiary-fixed-dim": "#00dbec",
+                    "outline": "#767575",
+                    "primary-dim": "#00ec3b",
+                    "on-error": "#450900",
+                    "surface-container": "#1a1a1a",
+                    "primary-container": "#00fc40",
+                    "secondary-dim": "#7aeb9d",
+                    "on-secondary-fixed-variant": "#006a36",
+                    "secondary-container": "#006d38",
+                    "surface-dim": "#0e0e0e",
+                    "tertiary-fixed": "#0eeafd",
+                    "on-tertiary-fixed": "#003d42",
+                    "primary": "#9cff93",
+                    "on-tertiary-fixed-variant": "#005c64",
+                    "tertiary": "#8af2ff",
+                    "secondary": "#89faaa",
+                    "surface-bright": "#2c2c2c",
+                    "on-error-container": "#ffd2c8",
+                    "inverse-primary": "#006f16",
+                    "surface-container-low": "#131313",
+                    "error-dim": "#d53d18",
+                    "outline-variant": "#484847",
+                    "on-surface-variant": "#adaaaa",
+                    "on-background": "#ffffff",
+                    "on-tertiary-container": "#005159",
+                    "surface": "#0e0e0e",
+                    "surface-tint": "#9cff93",
+                    "secondary-fixed-dim": "#7aeb9d",
+                    "tertiary-dim": "#00dbec",
+                    "on-primary-fixed-variant": "#006513",
+                    "background": "#0e0e0e",
+                    "on-secondary-container": "#e3ffe5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-card {
+            border-top-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+            border-top-right-radius: 0.125rem;
+            border-bottom-left-radius: 0.125rem;
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313] bg-black/60 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<button class="text-[#9cff93] active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-2xl font-bold tracking-widest text-[#9cff93] font-['Space_Grotesk'] uppercase">RIDECONNECT</h1>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30">
+<img alt="Rider Avatar" data-alt="Close-up portrait of a professional cyclist wearing a sleek matte black helmet and reflective neon green goggles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9787Cds4l3Wy_Dr4YuN_ygAwTHPxrqGh0dD3nDNUIzhVb7xj3xtS8T5wornxVnVRZ3aWkYJgNpBh9-vgXvyqWJfI-WwHygoAMxWIWQ2BAD09lk9dJMfuPazP0c3egitGs01FB35ETcfDs5edQpr1r3oevuM0aixlRc2dsf9IMJfEtYfzetDnCnXQEyuPUkLU82GuHowdoALhVOIUbP0apE9ZG28N4RyLVac9fXUkaf2FzERr08a41uCpLL-50TtVk0hN1cX7OA_E"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 min-h-screen">
+<div class="max-w-md mx-auto space-y-8">
+<!-- Hero Title -->
+<div class="space-y-2">
+<p class="text-primary font-headline tracking-[0.2em] text-xs font-bold uppercase">Mission Brief</p>
+<h2 class="text-4xl font-headline font-bold leading-none tracking-tighter">START NEW RIDE</h2>
+</div>
+<!-- Interactive Map Section (Background Layer Logic) -->
+<div class="relative h-48 w-full asymmetric-card overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Monochrome satellite view of urban city streets with glowing neon green digital route lines superimposed on top" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5RGQTCjZwijUBM3HrrE4Gptd8l7c7GGacFkLlHAj3h7bX8n3LIKsH3z8uO6yufKBi43z6QBtlEkgajUpCja1WzK1qdnV7lCUiWBeao3R4QR9vrgzh3UCQGofrwCNJU6g_SIc5njMXeZ9fCBc0r9r1mR3D_AI_Utab2rDBPhRnAVtHTO8Fkxx34KlfigwmicklPLcMHLfmJSmGVNrWEfe3toah-YHE_mR9309ztPN-5JzGpZfbWsxxhiriu6htir-qoVW7Y-C9jNA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2 glass-panel px-3 py-1.5 asymmetric-card border border-primary/10">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Select Origin</span>
+</div>
+</div>
+<!-- Ride Creation Form -->
+<form class="space-y-6">
+<!-- Field: Ride Name -->
+<div class="space-y-2 group">
+<label class="text-[10px] font-bold tracking-[0.15em] text-on-surface-variant uppercase ml-1">Ride Name</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-b-lg rounded-t-sm px-4 py-4 text-on-surface placeholder:text-outline-variant focus:ring-0 transition-all" placeholder="Morning Velocity Session" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Field: Destination -->
+<div class="space-y-2 group">
+<label class="text-[10px] font-bold tracking-[0.15em] text-on-surface-variant uppercase ml-1">Destination</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-b-lg rounded-t-sm px-4 py-4 text-on-surface placeholder:text-outline-variant focus:ring-0 transition-all" placeholder="Grizzly Peak Summit" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-500"></div>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant" data-icon="search">search</span>
+</div>
+</div>
+<!-- Bento Style Options -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 asymmetric-card border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="speed">speed</span>
+<p class="text-[10px] font-bold mt-2 text-on-surface-variant tracking-wider uppercase">Pace</p>
+<p class="text-sm font-headline font-medium">32-35 km/h</p>
+</div>
+<div class="bg-surface-container-low p-4 asymmetric-card border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="visibility">visibility</span>
+<p class="text-[10px] font-bold mt-2 text-on-surface-variant tracking-wider uppercase">Privacy</p>
+<p class="text-sm font-headline font-medium">Public Ride</p>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full mt-4 group relative overflow-hidden bg-primary text-on-primary py-5 rounded-xl font-headline font-extrabold tracking-tighter text-xl transition-all hover:shadow-[0px_12px_24px_rgba(156,255,147,0.25)] active:scale-95" type="button">
+<div class="absolute inset-0 bg-gradient-to-br from-[#9cff93] to-[#00fc40] opacity-100"></div>
+<span class="relative flex justify-center items-center gap-3">
+                        BECOME RIDE LEADER &amp; START
+                        <span class="material-symbols-outlined font-bold" data-icon="bolt">bolt</span>
+</span>
+</button>
+</form>
+<p class="text-center text-[10px] text-on-surface-variant tracking-widest leading-relaxed px-4">
+                BY STARTING THIS RIDE, YOU AGREE TO BE THE PRIMARY NAVIGATOR AND SAFETY LEAD FOR ALL JOINING MEMBERS.
+            </p>
+</div>
+</main>
+<!-- NavigationDrawer (Hidden by default, structure provided) -->
+<aside class="hidden fixed inset-y-0 left-0 z-[60] flex flex-col p-6 h-full w-80 rounded-r-xl bg-[#000000] shadow-2xl shadow-[#9cff93]/10">
+<div class="flex items-center gap-4 mb-8">
+<img class="w-12 h-12 rounded-full" data-alt="Rider Avatar profile image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBepozWpP2GOrDxVhXjyJdaE7hqXIq_rcMCGDBCKMTIf2lj5xe1rQ_OmEVFlZw7eKpUPjoH7Ch7K74_E5F5O--o7IkquCSWkCeSeW73iKh0VPYByegSjLdR0DfSl4WuY3dosG3Ep3F6bnXb0uK2ZPP_d_LoAyRlNNxKGlLgxkPiPhoM3CYRi4Qorx9WxwYGPBx740MQVe_FZOOrW38c7Xb_I83YHliTe8ITzV4VL67coaU9HCoNRyV4B9dlpdMtjQErlVnuSpPzchY"/>
+<div>
+<p class="text-[#9cff93] font-bold font-['Plus_Jakarta_Sans']">Rider One</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Pro Category</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#adaaaa] hover:bg-[#2c2c2c] transition-colors font-['Plus_Jakarta_Sans']" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> Profile
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#adaaaa] hover:bg-[#2c2c2c] transition-colors font-['Plus_Jakarta_Sans']" href="#">
+<span class="material-symbols-outlined" data-icon="route">route</span> My Rides
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-[#9cff93]/10 text-[#9cff93] border-l-4 border-[#9cff93] font-['Plus_Jakarta_Sans']" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span> Gear Setup
+            </a>
+</nav>
+</aside>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-black/80 backdrop-blur-2xl z-50 rounded-t-[2rem] shadow-[0px_-12px_24px_rgba(156,255,147,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#9cff93] scale-110 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="pedal_bike">pedal_bike</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">START</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">JOIN</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#484847] hover:text-[#9cff93] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold tracking-widest mt-1">MAP</span>
+</a>
+</nav>
+</body></html>
